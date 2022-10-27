@@ -19,7 +19,7 @@ public class TasksTest {
         name = new Faker().name().firstName();
         driver.navigate().to("http://localhost:8001/tasks/");
         addTask(name, true, true);
-        Assertions.assertEquals(returnWebElement("//p[@id='message']").getText(),  "Success!");
+        Assertions.assertEquals(returnWebElement("//p[@id='message']").getText(),  "Success!2");
         driver.quit();
     }
 
