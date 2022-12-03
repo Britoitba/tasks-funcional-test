@@ -65,6 +65,7 @@ public class TasksTest {
         name = new Faker().name().firstName();
         addTask(name, true, true);
         returnWebElement("//td[text()='"+ name +"']/following-sibling::td[2]/a[text()='Remove']").click();
+        Assertions.assertEquals(returnWebElement("//p[@id='message']").getText(),  "Success!");
         driver.quit();
     }
 
